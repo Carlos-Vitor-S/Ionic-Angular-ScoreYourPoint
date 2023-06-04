@@ -1,0 +1,50 @@
+<ion-content scrollY="false">
+  <div class="imgContainer">
+    <img src="/assets/logoEditada.png" alt="ScoreYourPoint Logo" />
+    <h3>Score Your Point</h3>
+  </div>
+  <ion-card>
+    <ion-card-content>
+      <form>
+        <div class="inputGroup">
+          <ion-input
+            label="Email"
+            placeholder="Example@Example.com"
+            type="email"
+            fill="outline"
+            labelPlacement="floating"
+          />
+          <ion-input
+            class="ion-margin-top"
+            label="Senha"
+            type="password"
+            fill="outline"
+            labelPlacement="floating"
+          />
+        </div>
+        <ion-button
+          color="success"
+          expand="block"
+          class="ion-margin-top"
+          [routerLink]="['/home']"
+          routerLinkActive="router-link-active"
+          >Login</ion-button
+        >
+      </form>
+
+      <div class="otherLoginContainer">
+        <h5>
+          Não Possui Cadastro?
+          <a [routerLink]="['/home']" routerLinkActive="router-link-active"
+            >Clique Aqui</a
+          >
+        </h5>
+        <img
+          src="/assets/googleLogo.png"
+          alt="Google Logo"
+          class="googleLogo"
+        />
+      </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

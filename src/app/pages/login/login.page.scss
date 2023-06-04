@@ -1,0 +1,26 @@
+.imgContainer {
+  background-color: white;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.imgContainer img {
+  margin-top: 1rem;
+}
+
+.otherLoginContainer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+
+.googleLogo {
+  margin-top: 1rem;
+  background-color: white;
+}
