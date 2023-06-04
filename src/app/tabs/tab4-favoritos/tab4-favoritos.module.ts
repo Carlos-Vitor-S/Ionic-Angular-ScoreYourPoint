@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { LoginPageRoutingModule } from './login-routing.module';
+import { Tab4FavoritosPageRoutingModule } from './tab4-favoritos-routing.module';
 
-import { LoginPage } from './login.page';
+import { Tab4FavoritosPage } from './tab4-favoritos.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    LoginPageRoutingModule
+    Tab4FavoritosPageRoutingModule
   ],
-  declarations: [LoginPage]
+  declarations: [Tab4FavoritosPage]
 })
-export class LoginPageModule {}
+export class Tab4FavoritosPageModule {}
