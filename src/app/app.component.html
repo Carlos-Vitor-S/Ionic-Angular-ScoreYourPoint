@@ -1,3 +1,52 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <ion-router-outlet>
+    <ion-tabs>
+      <!--Tab 1 - Home -->
+      <ion-tab-bar slot="bottom">
+        <ion-tab-button
+          [routerLink]="['/tab1-home']"
+          routerLinkActive="router-link-active"
+        >
+          <ion-icon name="home-outline"></ion-icon>
+          <ion-label>Home</ion-label>
+        </ion-tab-button>
+
+        <!--Tab 2 - Listar Eventos -->
+        <ion-tab-button
+          [routerLink]="['/tab2-eventos']"
+          routerLinkActive="router-link-active"
+        >
+          <ion-icon name="today-outline"></ion-icon>
+          <ion-label>Eventos</ion-label>
+        </ion-tab-button>
+
+        <!--Tab 3 - Criar Evento -->
+        <ion-tab-button
+          [routerLink]="['/tab3-add-evento']"
+          routerLinkActive="router-link-active"
+        >
+          <ion-icon name="add-circle" color="success"></ion-icon>
+          <ion-label>Adicionar</ion-label>
+        </ion-tab-button>
+
+        <!--Tab 4 - Eventos Favoritos  -->
+        <ion-tab-button
+          [routerLink]="['/tab4-favoritos']"
+          routerLinkActive="router-link-active"
+        >
+          <ion-icon name="star-outline"></ion-icon>
+          <ion-label>Favoritos</ion-label>
+        </ion-tab-button>
+
+        <!--Tab 5 - Perfil  -->
+        <ion-tab-button
+          [routerLink]="['/tab5-perfil']"
+          routerLinkActive="router-link-active"
+        >
+          <ion-icon name="person-outline"></ion-icon>
+          <ion-label>Perfil</ion-label>
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
+  </ion-router-outlet>
 </ion-app>
