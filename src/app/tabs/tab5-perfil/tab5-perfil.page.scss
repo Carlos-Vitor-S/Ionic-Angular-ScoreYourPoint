@@ -7,8 +7,26 @@
   flex-direction: column;
 }
 
-.imgContainer img {
-  margin-top: 1rem;
+.inputContainer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.inputGroup {
+  width: 100%;
+  padding: 1rem;
+}
+
+.loginQuestions > h6 {
+  font-size: small;
+}
+
+.loginQuestions {
+  display: flex;
+  justify-content: space-around;
 }
 
 .otherLoginContainer {
@@ -17,7 +35,6 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin-top: 2rem;
 }
 
 .googleLogo {

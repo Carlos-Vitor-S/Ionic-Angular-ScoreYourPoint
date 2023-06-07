@@ -1,87 +1,87 @@
-<ion-content scrollY="false">
+<ion-content scrollY="false" [fullscreen]="true" class="ion-padding">
   <div class="imgContainer">
     <img src="/assets/logoEditada.png" alt="ScoreYourPoint Logo" />
     <h3>Score Your Point</h3>
   </div>
-  <ion-card>
-    <ion-card-content>
+  <div class="inputContainer">
+    <div class="inputGroup">
       <form>
-        <div class="inputGroup">
-          <ion-input
-            label="Email"
-            placeholder="Example@Example.com"
-            type="email"
-            fill="outline"
-            labelPlacement="floating"
-          />
-          <ion-input
-            class="ion-margin-top"
-            label="Senha"
-            type="password"
-            fill="outline"
-            labelPlacement="floating"
-          />
+        <ion-input
+          label="Email"
+          placeholder="Example@Example.com"
+          type="email"
+          fill="outline"
+          labelPlacement="floating"
+        />
+        <ion-input
+          class="ion-margin-top"
+          label="Senha"
+          type="password"
+          fill="outline"
+          labelPlacement="floating"
+        />
+        <div class="loginQuestions">
+          <h6>Lembrar minha Senha</h6>
+          <h6>Esqueceu sua Senha?</h6>
         </div>
         <ion-button
           color="success"
           expand="block"
+          class="login-button"
           class="ion-margin-top"
           [routerLink]="['/login']"
           routerLinkActive="router-link-active"
-          >Login</ion-button
-        >
+          >Login
+        </ion-button>
       </form>
+    </div>
+  </div>
 
-      <div class="otherLoginContainer">
-        <h5>
-          Não Possui Cadastro?
-          <a [routerLink]="['/home']" routerLinkActive="router-link-active"
-            >Clique Aqui</a
-          >
-        </h5>
-        <img
-          src="/assets/googleLogo.png"
-          alt="Google Logo"
-          class="googleLogo"
-        />
-      </div>
-    </ion-card-content>
-  </ion-card>
-
-  <ion-tabs>
-    <!--Tab 1 - Home -->
-    <ion-tab-bar slot="bottom">
-      <ion-tab-button
-        [routerLink]="['/home']"
-        routerLinkActive="router-link-active"
+  <div class="otherLoginContainer">
+    <h6>
+      Não Possui Cadastro?
+      <a [routerLink]="['/home']" routerLinkActive="router-link-active"
+        >Clique Aqui</a
       >
-        <ion-icon name="home-outline"></ion-icon>
-        <ion-label>Home</ion-label>
-      </ion-tab-button>
+    </h6>
 
-      <!--Tab 2 - Listar Eventos -->
-      <ion-tab-button>
-        <ion-icon name="today-outline"></ion-icon>
-        <ion-label>Eventos</ion-label>
-      </ion-tab-button>
-
-      <!--Tab 3 - Criar Evento -->
-      <ion-tab-button>
-        <ion-icon name="add-circle" color="success"></ion-icon>
-        <ion-label>Adicionar</ion-label>
-      </ion-tab-button>
-
-      <!--Tab 4 - Eventos Favoritos  -->
-      <ion-tab-button>
-        <ion-icon name="star-outline"></ion-icon>
-        <ion-label>Favoritos</ion-label>
-      </ion-tab-button>
-
-      <!--Tab 5 - Perfil  -->
-      <ion-tab-button>
-        <ion-icon name="person-outline"></ion-icon>
-        <ion-label>Perfil</ion-label>
-      </ion-tab-button>
-    </ion-tab-bar>
-  </ion-tabs>
+    <img src="/assets/googleLogo.png" alt="Google Logo" class="googleLogo" />
+  </div>
 </ion-content>
+
+<ion-tabs>
+  <!--Tab 1 - Home -->
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button
+      [routerLink]="['/home']"
+      routerLinkActive="router-link-active"
+    >
+      <ion-icon name="home-outline"></ion-icon>
+      <ion-label>Home</ion-label>
+    </ion-tab-button>
+
+    <!--Tab 2 - Listar Eventos -->
+    <ion-tab-button>
+      <ion-icon name="today-outline"></ion-icon>
+      <ion-label>Eventos</ion-label>
+    </ion-tab-button>
+
+    <!--Tab 3 - Criar Evento -->
+    <ion-tab-button>
+      <ion-icon name="add-circle" color="success"></ion-icon>
+      <ion-label>Adicionar</ion-label>
+    </ion-tab-button>
+
+    <!--Tab 4 - Eventos Favoritos  -->
+    <ion-tab-button>
+      <ion-icon name="star-outline"></ion-icon>
+      <ion-label>Favoritos</ion-label>
+    </ion-tab-button>
+
+    <!--Tab 5 - Perfil  -->
+    <ion-tab-button>
+      <ion-icon name="person-outline"></ion-icon>
+      <ion-label>Perfil</ion-label>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>
