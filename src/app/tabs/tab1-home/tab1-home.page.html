@@ -1,7 +1,27 @@
-<ion-header [translucent]="true">
+<ion-header [translucent]="true" class="ion-header">
   <ion-toolbar>
     <ion-title>tab1-Home -> Navegue para perfil...</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content> home </ion-content>
+<ion-content>
+  <div class="card">
+    <div class="container">
+      <ion-input
+        label="Nome do Evento "
+        placeholder="Ex: Evento livre"
+        type="text"
+        fill="outline"
+        labelPlacement="floating"
+      />
+      <ion-input
+        class="ion-margin-top"
+        label="Endereço "
+        placeholder="Ex: Rua, bairro, numero"
+        type="text"
+        fill="outline"
+        labelPlacement="floating"
+      />
+    </div>
+  </div>
+</ion-content>
