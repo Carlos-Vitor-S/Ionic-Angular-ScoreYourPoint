@@ -1,15 +1,26 @@
 <ion-header [translucent]="true" class="ion-header">
   <ion-toolbar>
     <div class="eventosContainer">
-      <ion-title class="evento">Meus Favoritos</ion-title>
+      <ion-title
+        class="evento"
+        [routerLink]="['/tab2-eventos']"
+        routerLinkActive="router-link-active"
+        >Eventos</ion-title
+      >
+      <ion-title
+        class="evento"
+        [routerLink]="['/meus-eventos']"
+        routerLinkActive="router-link-active"
+        >Meus Eventos</ion-title
+      >
     </div>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true" class="ion-padding" scrollY="true">
+<ion-content [fullscreen]="true">
   <div class="eventCardContainer">
     <div class="imageContainer">
-      <img src="/assets/fotoEvento.jpg" alt="foto evento" />
+      <img src="/assets/fotoEvento2.jpg" alt="foto evento" />
     </div>
     <div class="eventDescription">
       <ul>

@@ -1,0 +1,23 @@
+.addEventContainer {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.addEventInputGroup {
+  width: 100%;
+
+  padding: 1rem;
+}
+
+.inputField {
+  margin-top: 1rem;
+}
+
+.ion-header {
+  background-color: black;
+  text-align: center;
+}

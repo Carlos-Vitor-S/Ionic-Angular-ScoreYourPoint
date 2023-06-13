@@ -2,7 +2,12 @@
   <ion-toolbar>
     <div class="eventosContainer">
       <ion-title>Eventos</ion-title>
-      <ion-title class="evento">Meus Eventos</ion-title>
+      <ion-title
+        class="evento"
+        [routerLink]="['/meus-eventos']"
+        routerLinkActive="router-link-active"
+        >Meus Eventos</ion-title
+      >
     </div>
   </ion-toolbar>
 </ion-header>

@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { Tab4FavoritosPageRoutingModule } from './tab4-favoritos-routing.module';
+import { MeusEventosPageRoutingModule } from './meus-eventos-routing.module';
 
-import { Tab4FavoritosPage } from './tab4-favoritos.page';
+import { MeusEventosPage } from './meus-eventos.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    Tab4FavoritosPageRoutingModule,
+    MeusEventosPageRoutingModule
   ],
-  declarations: [Tab4FavoritosPage],
+  declarations: [MeusEventosPage]
 })
-export class Tab4FavoritosPageModule {}
+export class MeusEventosPageModule {}

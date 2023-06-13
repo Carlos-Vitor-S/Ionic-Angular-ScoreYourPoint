@@ -1,13 +1,37 @@
-<ion-header [translucent]="true">
+<ion-header [translucent]="true" class="ion-header">
   <ion-toolbar>
-    <ion-title>registrar</ion-title>
+    <ion-title>Cadastrar Usuário</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">registrar</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content scrollY="false" [fullscreen]="true" class="ion-padding">
+  <div class="addEventContainer">
+    <div class="addEventInputGroup">
+      <form>
+        <ion-input
+          label="Email "
+          placeholder="Email"
+          type="text"
+          fill="outline"
+          labelPlacement="floating"
+        />
+        <ion-input
+          class="ion-margin-top"
+          type="password"
+          fill="outline"
+          placeholder="Senha"
+        />
+
+        <ion-button
+          color="success"
+          expand="block"
+          class="login-button"
+          class="ion-margin-top"
+          [routerLink]="['/tab1-home']"
+          routerLinkActive="router-link-active"
+          >Cadastrar
+        </ion-button>
+      </form>
+    </div>
+  </div>
 </ion-content>
