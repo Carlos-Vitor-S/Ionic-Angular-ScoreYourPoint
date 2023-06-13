@@ -1,4 +1,4 @@
-<ion-content scrollY="false" [fullscreen]="true" class="ion-padding">
+<ion-content scrollY="true" class="ion-padding">
   <div class="imgContainer">
     <img src="/assets/logoEditada.png" alt="ScoreYourPoint Logo" />
     <h3>Score Your Point</h3>
@@ -24,15 +24,15 @@
           <h6>Lembrar minha Senha</h6>
           <h6>Esqueceu sua Senha?</h6>
         </div>
-        <ion-button
-          color="success"
-          expand="block"
-          class="login-button"
-          class="ion-margin-top"
-          [routerLink]="['/login']"
-          routerLinkActive="router-link-active"
-          >Login
-        </ion-button>
+        <div class="login-button">
+          <ion-button
+            color="success"
+            id="login-button"
+            [routerLink]="['/login']"
+            routerLinkActive="router-link-active"
+            >Entrar
+          </ion-button>
+        </div>
       </form>
     </div>
   </div>
@@ -40,11 +40,10 @@
   <div class="otherLoginContainer">
     <h6>
       Não Possui Cadastro?
-      <a [routerLink]="['/home']" routerLinkActive="router-link-active"
+      <a [routerLink]="['/registrar']" routerLinkActive="router-link-active"
         >Clique Aqui</a
       >
     </h6>
-
     <img src="/assets/googleLogo.png" alt="Google Logo" class="googleLogo" />
   </div>
 </ion-content>

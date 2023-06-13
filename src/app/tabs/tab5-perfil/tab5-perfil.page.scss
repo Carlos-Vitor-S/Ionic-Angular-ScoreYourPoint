@@ -1,3 +1,4 @@
+/*container da logo em cima do form*/
 .imgContainer {
   background-color: white;
   width: 100%;
@@ -6,7 +7,7 @@
   justify-content: center;
   flex-direction: column;
 }
-
+/*iniciando form container geral*/
 .inputContainer {
   width: 100%;
   display: flex;
@@ -16,30 +17,39 @@
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
 }
-
+/*grupo de inputs dentro do container geral*/
 .inputGroup {
   width: 100%;
   padding: 1rem;
 }
 
-.loginQuestions > h6 {
-  font-size: small;
-}
-
+/*referente ao texto logo abaixo do input e antes do botão*/
 .loginQuestions {
   display: flex;
   justify-content: space-around;
 }
+.loginQuestions > h6 {
+  font-size: small;
+}
 
+.login-button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+#login-button {
+  width: 73%;
+}
+
+/*campo de perguntas fora do escopo do form e da div container*/
 .otherLoginContainer {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-}
-
-.googleLogo {
-  margin-top: 1rem;
-  background-color: white;
+  margin-top: 0.8rem;
 }

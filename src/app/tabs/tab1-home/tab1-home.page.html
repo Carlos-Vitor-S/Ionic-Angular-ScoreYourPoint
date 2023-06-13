@@ -1,27 +1,77 @@
-<ion-header [translucent]="true" class="ion-header">
-  <ion-toolbar>
-    <ion-title>tab1-Home -> Navegue para perfil...</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content>
-  <div class="card">
-    <div class="container">
-      <ion-input
-        label="Nome do Evento "
-        placeholder="Ex: Evento livre"
-        type="text"
-        fill="outline"
-        labelPlacement="floating"
-      />
-      <ion-input
-        class="ion-margin-top"
-        label="Endereço "
-        placeholder="Ex: Rua, bairro, numero"
-        type="text"
-        fill="outline"
-        labelPlacement="floating"
-      />
-    </div>
+<ion-content scrollY="true" class="ion-padding">
+  <ion-searchbar placeholder="Buscar"></ion-searchbar>
+  <div class="eventosDestaque">
+    <h5>Eventos em Destaque</h5>
   </div>
+
+  <swiper-container>
+    <swiper-slide><app-carrosel></app-carrosel></swiper-slide>
+    <swiper-slide><app-carrosel></app-carrosel></swiper-slide>
+    <swiper-slide><app-carrosel></app-carrosel></swiper-slide>
+  </swiper-container>
+
+  <ion-card-header class="ion-margin-top">
+    <ion-card-subtitle>Recomendados</ion-card-subtitle>
+  </ion-card-header>
+
+  <swiper-container>
+    <swiper-slide>
+      <div class="carroselContent">
+        <app-small-carrosel></app-small-carrosel>
+        <app-small-carrosel></app-small-carrosel>
+        <app-small-carrosel></app-small-carrosel>
+      </div>
+    </swiper-slide>
+    <ion-card-header class="ion-margin-top">
+      <ion-card-subtitle>Em Alta</ion-card-subtitle>
+    </ion-card-header>
+
+    <swiper-slide>
+      <div class="carroselContent">
+        <app-small-carrosel></app-small-carrosel>
+        <app-small-carrosel></app-small-carrosel>
+        <app-small-carrosel></app-small-carrosel>
+      </div>
+    </swiper-slide>
+  </swiper-container>
+  <ion-card-header class="ion-margin-top">
+    <ion-card-subtitle>Recentes</ion-card-subtitle>
+  </ion-card-header>
+  <swiper-container>
+    <swiper-slide>
+      <div class="carroselContent">
+        <app-small-carrosel></app-small-carrosel>
+        <app-small-carrosel></app-small-carrosel>
+        <app-small-carrosel></app-small-carrosel>
+      </div>
+    </swiper-slide>
+
+    <swiper-slide>
+      <div class="carroselContent">
+        <app-small-carrosel></app-small-carrosel>
+        <app-small-carrosel></app-small-carrosel>
+        <app-small-carrosel></app-small-carrosel>
+      </div>
+    </swiper-slide>
+  </swiper-container>
+  <ion-card-header class="ion-margin-top">
+    <ion-card-subtitle>Populares</ion-card-subtitle>
+  </ion-card-header>
+  <swiper-container>
+    <swiper-slide>
+      <div class="carroselContent">
+        <app-small-carrosel></app-small-carrosel>
+        <app-small-carrosel></app-small-carrosel>
+        <app-small-carrosel></app-small-carrosel>
+      </div>
+    </swiper-slide>
+
+    <swiper-slide>
+      <div class="carroselContent">
+        <app-small-carrosel></app-small-carrosel>
+        <app-small-carrosel></app-small-carrosel>
+        <app-small-carrosel></app-small-carrosel>
+      </div>
+    </swiper-slide>
+  </swiper-container>
 </ion-content>

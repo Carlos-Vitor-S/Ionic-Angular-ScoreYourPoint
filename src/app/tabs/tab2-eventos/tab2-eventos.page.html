@@ -7,25 +7,10 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true" class="ion-padding">
-  <div class="eventCardContainer">
-    <div class="imageContainer">
-      <img src="/assets/fotoEvento.jpg" alt="foto evento" />
-    </div>
-    <div class="eventContent">
-      <h3>Baba na unit</h3>
-      <h5>27 de abril, 19:00</h5>
-      <h6>Local: Farolandia</h6>
-    </div>
-  </div>
-  <div class="eventCardContainer">
-    <div class="imageContainer">
-      <img src="/assets/fotoEvento.jpg" alt="foto evento" />
-    </div>
-    <div class="eventContent">
-      <h3>Baba na unit</h3>
-      <h5>27 de abril, 19:00</h5>
-      <h6>Local: Farolandia</h6>
-    </div>
-  </div>
+<ion-content [fullscreen]="true" class="ion-padding" scrollY="true">
+  <app-card></app-card>
+  <app-card></app-card>
+  <app-card></app-card>
+  <app-card></app-card>
+  <app-card></app-card>
 </ion-content>

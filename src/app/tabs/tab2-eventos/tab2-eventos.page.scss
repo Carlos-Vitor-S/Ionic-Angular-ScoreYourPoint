@@ -2,37 +2,8 @@
   width: 100%;
   display: flex;
   flex-wrap: nowrap;
-
   margin-right: 1rem;
 }
 .evento {
   margin-right: 1rem;
-}
-
-.eventCardContainer {
-  display: flex;
-  flex-wrap: nowrap;
-  width: 100%;
-  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2);
-  transition: 0.3s;
-  border-radius: 0.4rem;
-  margin-top: 0.8rem;
-}
-
-.imageContainer {
-  display: flex;
-  align-items: center;
-
-  width: 55%;
-}
-
-.imageContainer > img {
-  border-radius: 1.4rem;
-  padding: 1rem;
-}
-
-.eventContent {
-  width: 45%;
-
-  align-items: center;
 }
