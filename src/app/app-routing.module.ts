@@ -57,7 +57,8 @@ const routes: Routes = [
       import('./pages/registrar/registrar.module').then(
         (m) => m.RegistrarPageModule
       ),
-  },  {
+  },
+  {
     path: 'meus-eventos',
     loadChildren: () => import('./pages/meus-eventos/meus-eventos.module').then( m => m.MeusEventosPageModule)
   },
