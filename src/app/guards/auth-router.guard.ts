@@ -20,7 +20,7 @@ export class AuthRouterGuard implements CanActivate {
       if(token) {
         return true
       } else {
-        this.router.navigate(['login'])
+        this.router.navigate(['tab5-perfil'])
         return false
       }
   }
