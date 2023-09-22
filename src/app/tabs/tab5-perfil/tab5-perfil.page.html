@@ -5,13 +5,14 @@
   </div>
   <div class="inputContainer">
     <div class="inputGroup">
-      <form>
+      <form [formGroup]="formPerfil">
         <ion-input
           label="Email"
           placeholder="Example@Example.com"
           type="email"
           fill="outline"
           labelPlacement="floating"
+          formControlName="email"
         />
         <ion-input
           class="ion-margin-top"
@@ -19,6 +20,7 @@
           type="password"
           fill="outline"
           labelPlacement="floating"
+          formControlName="password"
         />
         <div class="loginQuestions">
           <h6>Lembrar minha Senha</h6>
