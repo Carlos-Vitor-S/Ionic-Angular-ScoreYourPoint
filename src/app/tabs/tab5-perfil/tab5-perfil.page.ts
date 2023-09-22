@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { AuthService } from 'src/app/services/auth.service';
+import { inUser } from 'src/app/interface/inUser';
 
 @Component({
   selector: 'app-tab5-perfil',
@@ -9,22 +10,31 @@ import { AuthService } from 'src/app/services/auth.service';
 })
 export class Tab5PerfilPage implements OnInit {
   constructor(private authService: AuthService) {}
-  email: string = 'carlos@gmail.com.br';
-  senha: string = '1234567810';
-  ngOnInit() {
-    this.createUser();
-  }
-  formPerfil = new FormGroup({
+
+  ngOnInit() {}
+
+  formLogin = new FormGroup({
     email: new FormControl(''),
     senha: new FormControl(''),
   });
+  //logar no firebase
+  formSubmitLogin() {
+    if (this.formLogin.valid) {
+      let userData: inUser = Object.assign({} as inUser, this.formLogin.value);
 
-  //login de usario com email e senha
-  signInEmail() {
-    this.authService.signInWithEmail(this.email, this.senha);
+      this.authService
+        .signInWithEmail(userData.email, userData.senha)
+        .then(() => {
+          console.log('login sucesso');
+        })
+        .catch((erro) => {
+          console.log(erro);
+        });
+    }
+    this.formLogin.reset();
   }
 
-  createUser() {
+  /*createUser() {
     this.authService.registerWithEmail(this.email, this.senha);
-  }
+  }*/
 }

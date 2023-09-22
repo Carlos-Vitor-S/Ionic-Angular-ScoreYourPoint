@@ -10,15 +10,10 @@ export class AuthService {
   constructor(private authentication: AngularFireAuth) {}
 
   signInWithEmail(email: string, senha: string) {
-    console.log(this.authentication.signInWithEmailAndPassword(email, senha));
-
     return this.authentication.signInWithEmailAndPassword(email, senha);
   }
 
   registerWithEmail(email: string, senha: string) {
-    console.log(
-      this.authentication.createUserWithEmailAndPassword(email, senha)
-    );
     return this.authentication.createUserWithEmailAndPassword(email, senha);
   }
 }

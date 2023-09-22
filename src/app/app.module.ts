@@ -11,9 +11,8 @@ import { environment } from 'src/environments/environment';
 
 import { AuthService } from './services/auth.service';
 import { FormsModule } from '@angular/forms';
-import { FormGroup } from '@angular/forms';
-import { FormControl } from '@angular/forms';
-
+import { ReactiveFormsModule } from '@angular/forms';
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 @NgModule({
   declarations: [AppComponent],
   imports: [
@@ -21,7 +20,9 @@ import { FormControl } from '@angular/forms';
     IonicModule.forRoot(),
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireAuthModule,
     FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
