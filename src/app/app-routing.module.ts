@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { AuthRouterGuard } from './guards/auth-router.guard';
 
 const routes: Routes = [
   {
@@ -27,7 +28,7 @@ const routes: Routes = [
     loadChildren: () =>
       import('./tabs/tab2-eventos/tab2-eventos.module').then(
         (m) => m.Tab2EventosPageModule
-      ),
+      ), canActivate: [AuthRouterGuard]
   },
 
   {
@@ -35,14 +36,14 @@ const routes: Routes = [
     loadChildren: () =>
       import('./tabs/tab3-add-evento/tab3-add-evento.module').then(
         (m) => m.Tab3AddEventoPageModule
-      ),
+      ), canActivate: [AuthRouterGuard]
   },
   {
     path: 'tab4-favoritos',
     loadChildren: () =>
       import('./tabs/tab4-favoritos/tab4-favoritos.module').then(
         (m) => m.Tab4FavoritosPageModule
-      ),
+      ), canActivate: [AuthRouterGuard]
   },
   {
     path: 'tab5-perfil',
@@ -57,9 +58,12 @@ const routes: Routes = [
       import('./pages/registrar/registrar.module').then(
         (m) => m.RegistrarPageModule
       ),
-  },  {
+  },
+  {
     path: 'meus-eventos',
-    loadChildren: () => import('./pages/meus-eventos/meus-eventos.module').then( m => m.MeusEventosPageModule)
+    loadChildren: () => import('./pages/meus-eventos/meus-eventos.module').then(
+       (m) => m.MeusEventosPageModule
+       ), canActivate: [AuthRouterGuard]
   },
 
 ];
