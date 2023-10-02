@@ -1,34 +1,44 @@
 <ion-header [translucent]="true" class="ion-header">
-  <div class="container">
-    <div class="containerImage">
-      <label class="label">
-        <input type="file" accept="image/*" id="inputImage" />
-        <ion-icon name="person-circle-outline" class="fotoIcon"> </ion-icon>
-        <h4>Nome do Usuario</h4>
-      </label>
-    </div>
-  </div>
+  <label class="labelContent">
+    <h2>Nome do Usuario</h2>
+    <ion-icon name="person-circle-outline" class="fotoIcon"> </ion-icon>
+    <input type="file" accept="image/*" id="inputImage" />
+  </label>
 </ion-header>
 
 <ion-content [fullscreen]="true" class="ion-padding">
   <ion-card>
-    <ion-list>
-      <ion-item>
-        <ion-icon aria-hidden="true" name="airplane" slot="start"></ion-icon>
-        <ion-label>Airplane Mode</ion-label>
-      </ion-item>
-      <ion-item>
-        <ion-icon aria-hidden="true" name="wifi" slot="start"></ion-icon>
-        <ion-label>Wi-Fi</ion-label>
-      </ion-item>
-      <ion-item>
-        <ion-icon aria-hidden="true" name="bluetooth" slot="start"></ion-icon>
-        <ion-label>Bluetooth</ion-label>
-      </ion-item>
-      <ion-item>
-        <ion-icon aria-hidden="true" name="call" slot="start"></ion-icon>
-        <ion-label>Cellular</ion-label>
-      </ion-item>
-    </ion-list>
+    <div class="grid-container">
+      <div class="grid-item">
+        <ion-item lines="full" class="item-has-focus ion-touched ion-valid">
+          <ion-label class="ion-label">Idade: 20 Anos</ion-label>
+        </ion-item>
+      </div>
+      <div class="grid-item">
+        <ion-item lines="full" class="item-has-focus ion-touched ion-valid">
+          <ion-label class="ion-label">Idade: 20 Anos</ion-label>
+        </ion-item>
+      </div>
+      <div class="grid-item">
+        <ion-item lines="full" class="item-has-focus ion-touched ion-valid">
+          <ion-label class="ion-label">Idade: 20 Anos</ion-label>
+        </ion-item>
+      </div>
+      <div class="grid-item">
+        <ion-item lines="full" class="item-has-focus ion-touched ion-valid">
+          <ion-label class="ion-label">Idade: 20 Anos</ion-label>
+        </ion-item>
+      </div>
+      <div class="grid-item">
+        <ion-item lines="full" class="item-has-focus ion-touched ion-valid">
+          <ion-label class="ion-label">Idade: 20 Anos</ion-label>
+        </ion-item>
+      </div>
+      <div class="grid-item">
+        <ion-item lines="full" class="item-has-focus ion-touched ion-valid">
+          <ion-label class="ion-label">Idade: 20 Anos</ion-label>
+        </ion-item>
+      </div>
+    </div>
   </ion-card>
 </ion-content>
