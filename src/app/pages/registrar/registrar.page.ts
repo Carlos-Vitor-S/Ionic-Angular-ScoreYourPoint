@@ -14,9 +14,13 @@ export class RegistrarPage implements OnInit {
     private authservice: AuthService,
     private storageService: StorageService,
     private router: Router
-    ) {}
-  ngOnInit() {}
+  ) { }
+  ngOnInit() { }
   formRegistrar = new FormGroup({
+
+    name: new FormControl(''),
+    cpf: new FormControl(''),
+    phone: new FormControl(''),
     email: new FormControl(''),
     senha: new FormControl(''),
   });
@@ -27,20 +31,28 @@ export class RegistrarPage implements OnInit {
         {} as inUser,
         this.formRegistrar.value
       );
+      this.conectionService(userData)
+      this.formRegistrar.reset;
+    }
+  }
 
-      this.authservice
-        .registerWithEmail(userData.email, userData.senha)
-        .then((userCredential) => {
+  conectionService(data: inUser) {
+    try {
+      this.authservice.registerWithEmail(data.email, data.senha).then(
+        (userCredential) => {
+          userCredential.user?.updateProfile({ displayName: data.name }).then(
+            (userUpdate) => {
+              this.storageService.setLocalstorage('user', JSON.stringify(userCredential.user))
+            }
+          )
           userCredential.user?.getIdToken().then(
             (accessToken) => {
               this.storageService.setLocalstorage('token', accessToken);
               this.router.navigate(['home'])
             }
           )
-        })
-        .then((erro) => {
-          console.log(erro);
-        });
-    }
+        }
+      )
+    } catch (error) { }
   }
 }
