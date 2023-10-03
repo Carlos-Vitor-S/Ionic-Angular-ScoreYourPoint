@@ -9,6 +9,33 @@
     <div class="addEventInputGroup">
       <form [formGroup]="formRegistrar" (ngSubmit)="formSubmitRegistrar()">
         <ion-input
+          label="Nome"
+          class="ion-margin-top"
+          type="text"
+          fill="outline"
+          labelPlacement="floating"
+          placeholder="Seu nome "
+          formControlName="name"
+        />
+        <ion-input
+          label="CPF"
+          class="ion-margin-top"
+          type="text"
+          fill="outline"
+          labelPlacement="floating"
+          placeholder="000.000.000-00 "
+          formControlName="cpf"
+        />
+        <ion-input
+          label="Telefone"
+          class="ion-margin-top"
+          type="text"
+          fill="outline"
+          labelPlacement="floating"
+          placeholder="79 99999-9999"
+          formControlName="phone"
+        />
+        <ion-input
           label="Email "
           placeholder="Email"
           type="text"
@@ -17,9 +44,11 @@
           formControlName="email"
         />
         <ion-input
+          label="Senha"
           class="ion-margin-top"
           type="password"
           fill="outline"
+          labelPlacement="floating"
           placeholder="Senha"
           formControlName="senha"
         />
