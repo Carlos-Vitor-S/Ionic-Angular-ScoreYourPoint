@@ -5,13 +5,14 @@
   </div>
   <div class="inputContainer">
     <div class="inputGroup">
-      <form>
+      <form [formGroup]="formLogin" (ngSubmit)="formSubmitLogin()">
         <ion-input
           label="Email"
           placeholder="Example@Example.com"
           type="email"
           fill="outline"
           labelPlacement="floating"
+          formControlName="email"
         />
         <ion-input
           class="ion-margin-top"
@@ -19,17 +20,14 @@
           type="password"
           fill="outline"
           labelPlacement="floating"
+          formControlName="senha"
         />
         <div class="loginQuestions">
           <h6>Lembrar minha Senha</h6>
           <h6>Esqueceu sua Senha?</h6>
         </div>
         <div class="login-button">
-          <ion-button
-            color="success"
-            id="login-button"
-            [routerLink]="['/login']"
-            routerLinkActive="router-link-active"
+          <ion-button color="success" id="login-button" type="submit"
             >Entrar
           </ion-button>
         </div>

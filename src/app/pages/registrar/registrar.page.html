@@ -7,19 +7,50 @@
 <ion-content scrollY="false" [fullscreen]="true" class="ion-padding">
   <div class="addEventContainer">
     <div class="addEventInputGroup">
-      <form>
+      <form [formGroup]="formRegistrar" (ngSubmit)="formSubmitRegistrar()">
+        <ion-input
+          label="Nome"
+          class="ion-margin-top"
+          type="text"
+          fill="outline"
+          labelPlacement="floating"
+          placeholder="Seu nome "
+          formControlName="name"
+        />
+        <ion-input
+          label="CPF"
+          class="ion-margin-top"
+          type="text"
+          fill="outline"
+          labelPlacement="floating"
+          placeholder="000.000.000-00 "
+          formControlName="cpf"
+        />
+        <ion-input
+          label="Telefone"
+          class="ion-margin-top"
+          type="text"
+          fill="outline"
+          labelPlacement="floating"
+          placeholder="79 99999-9999"
+          formControlName="phone"
+        />
         <ion-input
           label="Email "
           placeholder="Email"
           type="text"
           fill="outline"
           labelPlacement="floating"
+          formControlName="email"
         />
         <ion-input
+          label="Senha"
           class="ion-margin-top"
           type="password"
           fill="outline"
+          labelPlacement="floating"
           placeholder="Senha"
+          formControlName="senha"
         />
 
         <ion-button
@@ -27,8 +58,7 @@
           expand="block"
           class="login-button"
           class="ion-margin-top"
-          [routerLink]="['/tab1-home']"
-          routerLinkActive="router-link-active"
+          type="submit"
           >Cadastrar
         </ion-button>
       </form>
