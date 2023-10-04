@@ -64,9 +64,11 @@ const routes: Routes = [
     loadChildren: () => import('./pages/meus-eventos/meus-eventos.module').then(
        (m) => m.MeusEventosPageModule
        ), canActivate: [AuthRouterGuard]
-  },  {
+  },
+  {
     path: 'perfil-efetuado',
-    loadChildren: () => import('./pages/perfil-efetuado/perfil-efetuado.module').then( m => m.PerfilEfetuadoPageModule)
+    loadChildren: () => import('./pages/perfil-efetuado/perfil-efetuado.module').then( m => m.PerfilEfetuadoPageModule),
+    canActivate: [AuthRouterGuard]
   },
 
 

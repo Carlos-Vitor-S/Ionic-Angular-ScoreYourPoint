@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PerfilEfetuadoPage implements OnInit {
 
+  displayName = ''
+
   constructor() { }
 
   ngOnInit() {
+    let data = localStorage.getItem('user')
+    let user = JSON.parse(data!)
+    this.displayName = user.displayName
   }
 
 }

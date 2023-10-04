@@ -35,6 +35,7 @@ export class Tab5PerfilPage implements OnInit {
             (token) => {
               let accessToken = token;
               this.storageService.setLocalstorage('token', accessToken);
+              this.storageService.setLocalstorage('user', JSON.stringify(loginCredential.user))
               this.router.navigate(['home'])
             }
           )
