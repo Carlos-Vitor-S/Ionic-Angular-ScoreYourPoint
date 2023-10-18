@@ -1,44 +1,128 @@
 <ion-header [translucent]="true" class="ion-header">
-  <label class="labelContent">
-    <h2>{{ displayName }}</h2>
-    <ion-icon name="person-circle-outline" class="fotoIcon"> </ion-icon>
-    <input type="file" accept="image/*" id="inputImage" />
-  </label>
+  <div class="headerContainer">
+    <label class="labelContent">
+      <ion-icon name="person-circle-outline" class="fotoIcon"> </ion-icon>
+      <input type="file" accept="image/*" id="inputImage" />
+    </label>
+    <div class="headerInfoContainer">
+      <div class="headerInfoContent">
+        <h2>Nome do Usuario</h2>
+        <br />
+        <h4>Email@gmail.com</h4>
+      </div>
+      <ion-button
+        color="light"
+        size="small"
+        class="editHeaderButton"
+        id="open-modal"
+      >
+        Editar Perfil
+        <ion-icon
+          slot="end"
+          name="pencil-outline"
+          class="buttonIcon"
+        ></ion-icon>
+      </ion-button>
+    </div>
+  </div>
 </ion-header>
 
-<ion-content [fullscreen]="true" class="ion-padding">
+<ion-content [fullscreen]="true" class="ion-padding" scrollY="true">
+  <ion-modal trigger="open-modal" (willDismiss)="onWillDismiss($event)">
+    <ng-template>
+      <ion-header>
+        <ion-toolbar>
+          <ion-buttons slot="start">
+            <ion-button (click)="cancel()">Voltar</ion-button>
+          </ion-buttons>
+          <ion-title>Editar Perfil</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content class="ion-padding">
+        <ion-item>
+          <ion-input
+            label="Enter your name"
+            labelPlacement="stacked"
+            type="text"
+            placeholder="Your name"
+            [(ngModel)]="name"
+          ></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input
+            label="Enter your name"
+            labelPlacement="stacked"
+            type="text"
+            placeholder="Your name"
+            [(ngModel)]="name"
+          ></ion-input>
+        </ion-item>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
   <ion-card>
+    <div class="labelGridItens">
+      <ion-icon aria-hidden="true" name="person" slot="start" class="iconInfo">
+      </ion-icon>
+      <ion-label class="infoLabel">Minhas Informações</ion-label>
+    </div>
+    <br />
     <div class="grid-container">
       <div class="grid-item">
+        <span class="ionLabelTitle">
+          <ion-label class="ion-label">Idade</ion-label>
+        </span>
         <ion-item lines="full" class="item-has-focus ion-touched ion-valid">
-          <ion-label class="ion-label">Idade: 20 Anos</ion-label>
+          <span class="itemInfo">23 Anos</span>
+        </ion-item>
+      </div>
+
+      <div class="grid-item">
+        <span class="ionLabelTitle">
+          <ion-label class="ion-label">Habilidade</ion-label>
+        </span>
+        <ion-item lines="full" class="item-has-focus ion-touched ion-valid">
+          <span class="itemInfo">Canhoto</span>
+        </ion-item>
+      </div>
+
+      <div class="grid-item">
+        <span class="ionLabelTitle">
+          <ion-label class="ion-label">Habilidade</ion-label>
+        </span>
+        <ion-item lines="full" class="item-has-focus ion-touched ion-valid">
+          <span class="itemInfo">Canhoto</span>
         </ion-item>
       </div>
       <div class="grid-item">
+        <span class="ionLabelTitle">
+          <ion-label class="ion-label">Sexo</ion-label>
+        </span>
         <ion-item lines="full" class="item-has-focus ion-touched ion-valid">
-          <ion-label class="ion-label">Idade: 20 Anos</ion-label>
+          <span class="itemInfo">Masculino</span>
         </ion-item>
       </div>
       <div class="grid-item">
+        <span class="ionLabelTitle">
+          <ion-label class="ion-label">Peso</ion-label>
+        </span>
         <ion-item lines="full" class="item-has-focus ion-touched ion-valid">
-          <ion-label class="ion-label">Idade: 20 Anos</ion-label>
+          <span class="itemInfo">80 kilos</span>
         </ion-item>
       </div>
       <div class="grid-item">
+        <span class="ionLabelTitle">
+          <ion-label class="ion-label">Altura</ion-label>
+        </span>
         <ion-item lines="full" class="item-has-focus ion-touched ion-valid">
-          <ion-label class="ion-label">Idade: 20 Anos</ion-label>
+          <span class="itemInfo">1,80 m</span>
         </ion-item>
       </div>
-      <div class="grid-item">
-        <ion-item lines="full" class="item-has-focus ion-touched ion-valid">
-          <ion-label class="ion-label">Idade: 20 Anos</ion-label>
-        </ion-item>
-      </div>
-      <div class="grid-item">
-        <ion-item lines="full" class="item-has-focus ion-touched ion-valid">
-          <ion-label class="ion-label">Idade: 20 Anos</ion-label>
-        </ion-item>
-      </div>
+    </div>
+    <div class="logoutButtonContainer">
+      <ion-button size="small" color="light" class="logoutButton">
+        <span class="logoutButtonText">Sair da Conta</span>
+      </ion-button>
     </div>
   </ion-card>
 </ion-content>
