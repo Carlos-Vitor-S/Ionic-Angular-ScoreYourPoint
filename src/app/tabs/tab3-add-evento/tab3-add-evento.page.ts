@@ -6,10 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./tab3-add-evento.page.scss'],
 })
 export class Tab3AddEventoPage implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
+  constructor() {}
+  radioSelecionado: boolean = false;
+  ngOnInit() {}
+  desmarcarRadioInput() {
+    console.log('clicando...');
   }
-
 }

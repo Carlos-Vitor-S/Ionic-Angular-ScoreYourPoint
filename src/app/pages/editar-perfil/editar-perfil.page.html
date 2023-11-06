@@ -1,0 +1,41 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <div class="headerContainer">
+      <div class="linkVoltar">
+        <a
+          [routerLink]="['/perfil-efetuado']"
+          routerLinkActive="router-link-active"
+          >< Voltar</a
+        >
+      </div>
+      <div class="titleContainer">
+        <ion-title>Editar Perfil</ion-title>
+      </div>
+    </div>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+  <div class="inputContainer">
+    <div class="imageContainer">
+      <label class="labelContent">
+        <ion-icon name="person-circle-outline" class="fotoIcon"> </ion-icon>
+        <input type="file" accept="image/*" id="inputImage" />
+      </label>
+    </div>
+    <ion-item lines="full" class="item-has-focus ion-touched ion-valid">
+      <span class="itemInfo">Editar Foto</span>
+    </ion-item>
+    <div class="inputGroup">
+      <form>
+        <ion-input
+          class="ion-margin-top"
+          label="Nome do Evento"
+          placeholder="Nome do evento"
+          type="text"
+          fill="outline"
+          labelPlacement="floating"
+        />
+      </form>
+    </div>
+  </div>
+</ion-content>
