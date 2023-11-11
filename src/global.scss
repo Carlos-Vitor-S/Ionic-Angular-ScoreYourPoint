@@ -41,5 +41,11 @@
   --ion-color-step-600: #999999;
   --ion-color-success: #2dd36f;
   --ion-color-success-shade: #29c467;
+  --ion-color-success-lighter: #a5f0c3;
   --ion-color-sucess-dark: #1fa354;
+  --ion-color-sucess-darker: #126131;
+}
+
+ion-title {
+  color: var(--ion-color-sucess-darker);
 }

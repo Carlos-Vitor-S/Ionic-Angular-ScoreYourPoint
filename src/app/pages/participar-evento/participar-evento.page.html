@@ -1,0 +1,48 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <div class="headerContainer">
+      <div class="linkVoltar">
+        <a
+          [routerLink]="['/perfil-efetuado']"
+          routerLinkActive="router-link-active"
+          ><span class="customIcon"><</span> Voltar</a
+        >
+      </div>
+    </div>
+  </ion-toolbar>
+  <div class="toolbarline"></div>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <div class="containerGeral">
+    <div class="imageContainer">
+      <img src="/assets/fotoEvento.jpg" alt="foto evento" />
+
+      <h2>Baba na unit</h2>
+    </div>
+
+    <ion-list>
+      <ion-item lines="none">
+        <ion-icon
+          aria-hidden="true"
+          name="time-outline"
+          slot="start"
+        ></ion-icon>
+        <ion-label>27 de abril, 19:00</ion-label>
+      </ion-item>
+
+      <ion-item lines="none">
+        <ion-icon
+          aria-hidden="true"
+          name="location-outline"
+          slot="start"
+        ></ion-icon>
+        <ion-label>Quadra X Farolandia</ion-label>
+      </ion-item>
+    </ion-list>
+    <div class="barLineDivider"></div>
+    <div class="containerDescricao">
+      <h3>Descrição do Evento</h3>
+    </div>
+  </div>
+</ion-content>

@@ -81,6 +81,14 @@ const routes: Routes = [
     path: 'editar-perfil',
     loadChildren: () => import('./pages/editar-perfil/editar-perfil.module').then( m => m.EditarPerfilPageModule)
   },
+  {
+    path: 'redirecionar',
+    loadChildren: () => import('./pages/redirecionar/redirecionar.module').then( m => m.RedirecionarPageModule)
+  },
+  {
+    path: 'participar-evento',
+    loadChildren: () => import('./pages/participar-evento/participar-evento.module').then( m => m.ParticiparEventoPageModule)
+  },
 
 ];
 

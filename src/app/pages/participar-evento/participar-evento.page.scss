@@ -1,0 +1,87 @@
+//header
+.headerContainer {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+.linkVoltar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100%;
+  margin-left: 0.5rem;
+}
+
+.ionIconArrow {
+  height: 100%;
+}
+
+.arrowBack {
+  width: 2rem;
+}
+
+.linkVoltar a {
+  text-decoration: none;
+  color: var(--ion-color-success);
+  font-size: 1.1rem;
+}
+
+.customIcon {
+  font-size: 1.3rem;
+}
+
+.toolbarline {
+  width: 100%;
+  height: 0.2rem;
+  background-color: var(--ion-color-success);
+}
+
+//body
+
+.containerGeral {
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+}
+
+.imageContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.imageContainer img {
+  border-radius: 0.5rem;
+}
+
+.imageContainer h2 {
+  margin-top: 1rem;
+}
+
+ion-icon {
+  margin-right: 0.4rem;
+}
+
+.dateInfo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.barLineDivider {
+  width: 100%;
+  height: 0.1rem;
+  background-color: var(--ion-color-success);
+}
+// area da descrição do evento
+
+.containerDescricao {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}

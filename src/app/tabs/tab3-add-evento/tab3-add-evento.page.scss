@@ -24,6 +24,7 @@
   justify-content: center;
   height: 100%;
   width: 100%;
+  margin-top: 1rem;
 }
 
 .labelContent {
@@ -171,4 +172,12 @@ ion-item {
 
 .login-button span {
   text-transform: none;
+}
+
+//linha da toolbar
+
+.toolbarline {
+  width: 100%;
+  height: 0.2rem;
+  background-color: var(--ion-color-success);
 }
