@@ -4,6 +4,7 @@ import { AuthService } from 'src/app/services/auth.service';
 import { inUser } from 'src/app/interface/inUser';
 import { StorageService } from 'src/app/services/storage.service';
 import { Router } from '@angular/router';
+import { LoadingController } from '@ionic/angular';
 
 @Component({
   selector: 'app-tab5-perfil',
@@ -14,9 +15,14 @@ export class Tab5PerfilPage implements OnInit {
   constructor(
     private authService: AuthService,
     private storageService: StorageService,
-    private router: Router
+    private router: Router,
+    private loadingController: LoadingController
     ) {}
 
+
+  async ionViewDidEnter() {
+    await this.presentLoading();
+  }
   ngOnInit() {}
 
   formLogin = new FormGroup({
@@ -46,6 +52,20 @@ export class Tab5PerfilPage implements OnInit {
         });
     }
     this.formLogin.reset();
+  }
+
+  async presentLoading() {
+    const loading = await this.loadingController.create({
+      message: 'Loading...',
+      duration: 1000,
+      translucent: true,
+    });
+
+    await loading.present();
+
+
+    const {role, data} = await loading.onDidDismiss();
+    console.log('Loading', data);
   }
 
   /*createUser() {
