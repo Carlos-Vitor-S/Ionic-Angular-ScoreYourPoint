@@ -107,12 +107,7 @@
                   class="bannerImg"
                   alt="Banner Livre"
                 />
-                <input
-                  type="radio"
-                  class="inputRadio"
-                  checked="false"
-                  (click)="desmarcarRadioInput()"
-                />
+                <input type="radio" class="inputRadio" checked="false" />
               </label>
 
               <div class="bannerDescricao">
@@ -125,7 +120,7 @@
               </div>
             </div>
 
-            <div class="banner" id="banner-padrao">
+            <div class="banner" id="banner-padrao" (click)="toggleDiv()">
               <img
                 src="/assets/banner-padrao.png"
                 class="bannerImg"
@@ -139,6 +134,28 @@
                   jogar sem definir posições dos jogadores
                 </p>
               </div>
+            </div>
+
+            <div *ngIf="mostrarDiv" class="selecionarTime">
+              <ion-card class="cardJogador">
+                <img src="/assets/goleiroNB.png" alt="" />
+                <div class="cardContent"></div>
+              </ion-card>
+              <ion-card class="cardJogador">
+                <img src="/assets/goleiroNB.png" alt="" />
+                <div class="cardContent">
+                  <h3>Goleiro</h3>
+                  <form>
+                    <ion-item>
+                      <ion-input
+                        label="Floating label"
+                        labelPlacement="floating"
+                        placeholder="Quantidade"
+                      ></ion-input>
+                    </ion-item>
+                  </form>
+                </div>
+              </ion-card>
             </div>
           </div>
         </div>

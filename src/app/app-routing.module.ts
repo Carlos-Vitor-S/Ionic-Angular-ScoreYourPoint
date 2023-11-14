@@ -89,6 +89,10 @@ const routes: Routes = [
     path: 'participar-evento',
     loadChildren: () => import('./pages/participar-evento/participar-evento.module').then( m => m.ParticiparEventoPageModule)
   },
+  {
+    path: 'definir-times',
+    loadChildren: () => import('./pages/definir-times/definir-times.module').then( m => m.DefinirTimesPageModule)
+  },
 
 ];
 
