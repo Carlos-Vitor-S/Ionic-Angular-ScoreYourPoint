@@ -49,4 +49,18 @@ export class AuthService {
   registerWithEmail(email: string, senha: string) {
     return this.authentication.createUserWithEmailAndPassword(email, senha);
   }
+
+  logout() {
+    this.authentication.signOut()
+      .then(() => {
+        localStorage.removeItem('token');
+        localStorage.removeItem('user');
+        localStorage.setItem('isLoggedIn', false.toString());
+        this.isLoggedInSubject.next(false);
+        this.router.navigate(['/tab1-home']);
+      })
+      .catch((error) => {
+        console.error('Erro ao deslogar:', error);
+      });
+  }
 }

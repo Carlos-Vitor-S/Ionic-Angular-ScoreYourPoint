@@ -14,21 +14,11 @@ export class AppComponent implements OnInit {
   isLoggedIn = false;
   private subscription: Subscription;
 
-
   constructor(
     private authService: AuthService
   ) {
     this.subscription = this.authService.isLoggedIn$.subscribe((isLoggedIn) => {
       this.isLoggedIn = isLoggedIn;
-      /*let user = JSON.parse(localStorage.getItem('user'));
-      console.log(user);
-      if (this.isLoggedIn == true && user != null) {
-        let name = user.displayName;
-        let firstName = name.split(' ')[0];
-        this.displayName = firstName;
-        localStorage.setItem('isLoggedIn', true.toString());
-        console.log(firstName)
-      }*/
     });
     this.subscription = this.authService.nameUserLoggedIn$.subscribe((displayName) => {
       this.displayName = displayName;
@@ -43,10 +33,7 @@ export class AppComponent implements OnInit {
     }
   }
 
-
-
   ngOnDestroy() {
-    // Certifique-se de cancelar a inscrição para evitar vazamentos de memória
     this.subscription.unsubscribe();
   }
 
@@ -60,6 +47,4 @@ export class AppComponent implements OnInit {
       console.log(firstName)
     }
   }
-
-
 }
