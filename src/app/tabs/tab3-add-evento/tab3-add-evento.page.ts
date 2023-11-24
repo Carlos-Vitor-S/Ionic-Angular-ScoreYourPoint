@@ -9,7 +9,9 @@ export class Tab3AddEventoPage implements OnInit {
   constructor() {}
   radioSelecionado: boolean = false;
   ngOnInit() {}
-  desmarcarRadioInput() {
-    console.log('clicando...');
+  mostrarDiv: boolean = false;
+
+  toggleDiv() {
+    this.mostrarDiv = !this.mostrarDiv;
   }
 }
