@@ -17,5 +17,6 @@ register();
   imports: [CommonModule, FormsModule, IonicModule, Tab1HomePageRoutingModule],
   declarations: [Tab1HomePage, CarroselComponent, SmallCarroselComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
+  exports: [Tab1HomePage],
 })
 export class Tab1HomePageModule {}

@@ -28,7 +28,8 @@ const routes: Routes = [
     loadChildren: () =>
       import('./tabs/tab2-eventos/tab2-eventos.module').then(
         (m) => m.Tab2EventosPageModule
-      ), canActivate: [AuthRouterGuard]
+      ),
+    canActivate: [AuthRouterGuard],
   },
 
   {
@@ -36,14 +37,16 @@ const routes: Routes = [
     loadChildren: () =>
       import('./tabs/tab3-add-evento/tab3-add-evento.module').then(
         (m) => m.Tab3AddEventoPageModule
-      ), canActivate: [AuthRouterGuard]
+      ),
+    canActivate: [AuthRouterGuard],
   },
   {
     path: 'tab4-favoritos',
     loadChildren: () =>
       import('./tabs/tab4-favoritos/tab4-favoritos.module').then(
         (m) => m.Tab4FavoritosPageModule
-      ), canActivate: [AuthRouterGuard]
+      ),
+    canActivate: [AuthRouterGuard],
   },
   {
     path: 'tab5-perfil',
@@ -61,16 +64,35 @@ const routes: Routes = [
   },
   {
     path: 'meus-eventos',
-    loadChildren: () => import('./pages/meus-eventos/meus-eventos.module').then(
-       (m) => m.MeusEventosPageModule
-       ), canActivate: [AuthRouterGuard]
+    loadChildren: () =>
+      import('./pages/meus-eventos/meus-eventos.module').then(
+        (m) => m.MeusEventosPageModule
+      ),
+    canActivate: [AuthRouterGuard],
   },
   {
     path: 'perfil-efetuado',
-    loadChildren: () => import('./pages/perfil-efetuado/perfil-efetuado.module').then( m => m.PerfilEfetuadoPageModule),
-    canActivate: [AuthRouterGuard]
+    loadChildren: () =>
+      import('./pages/perfil-efetuado/perfil-efetuado.module').then(
+        (m) => m.PerfilEfetuadoPageModule
+      ),
+    canActivate: [AuthRouterGuard],
+  },  {
+    path: 'editar-perfil',
+    loadChildren: () => import('./pages/editar-perfil/editar-perfil.module').then( m => m.EditarPerfilPageModule)
   },
-
+  {
+    path: 'redirecionar',
+    loadChildren: () => import('./pages/redirecionar/redirecionar.module').then( m => m.RedirecionarPageModule)
+  },
+  {
+    path: 'participar-evento',
+    loadChildren: () => import('./pages/participar-evento/participar-evento.module').then( m => m.ParticiparEventoPageModule)
+  },
+  {
+    path: 'definir-times',
+    loadChildren: () => import('./pages/definir-times/definir-times.module').then( m => m.DefinirTimesPageModule)
+  },
 
 ];
 

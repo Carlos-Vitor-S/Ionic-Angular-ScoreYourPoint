@@ -1,0 +1,38 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <div class="headerContainer">
+      <div class="linkVoltar">
+        <a
+          [routerLink]="['/perfil-efetuado']"
+          routerLinkActive="router-link-active"
+          ><span class="customIcon"><</span> Voltar</a
+        >
+      </div>
+    </div>
+  </ion-toolbar>
+  <div class="toolbarline"></div>
+</ion-header>
+<div class="toolbarline"></div>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <div class="containerGeral">
+    <div class="definirTime">
+      <h2>Defina as Posições - Time 1</h2>
+      <ion-card class="cardJogador">
+        <img src="/assets/goleiroNB.png" alt="" />
+        <div class="cardContent">
+          <h3>Goleiro</h3>
+          <form>
+            <ion-item>
+              <ion-input
+                label="Floating label"
+                labelPlacement="floating"
+                placeholder="Quantidade"
+              ></ion-input>
+            </ion-item>
+          </form>
+        </div>
+      </ion-card>
+    </div>
+  </div>
+</ion-content>

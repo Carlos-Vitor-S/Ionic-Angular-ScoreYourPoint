@@ -15,7 +15,7 @@ export class Tab5PerfilPage implements OnInit {
     private authService: AuthService,
     private storageService: StorageService,
     private router: Router
-    ) {}
+  ) {}
 
   ngOnInit() {}
 
@@ -30,25 +30,7 @@ export class Tab5PerfilPage implements OnInit {
 
       this.authService
         .signInWithEmail(userData.email, userData.senha)
-        .then((loginCredential) => {
-          loginCredential.user?.getIdToken().then(
-            (token) => {
-              let accessToken = token;
-              this.storageService.setLocalstorage('token', accessToken);
-              this.storageService.setLocalstorage('user', JSON.stringify(loginCredential.user))
-              this.router.navigate(['home'])
-            }
-          )
-          console.log('login sucesso', loginCredential);
-        })
-        .catch((erro) => {
-          console.log(erro);
-        });
     }
     this.formLogin.reset();
   }
-
-  /*createUser() {
-    this.authService.registerWithEmail(this.email, this.senha);
-  }*/
 }

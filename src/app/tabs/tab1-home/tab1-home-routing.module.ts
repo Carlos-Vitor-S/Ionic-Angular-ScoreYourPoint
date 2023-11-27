@@ -6,8 +6,8 @@ import { Tab1HomePage } from './tab1-home.page';
 const routes: Routes = [
   {
     path: '',
-    component: Tab1HomePage
-  }
+    component: Tab1HomePage,
+  },
 ];
 
 @NgModule({

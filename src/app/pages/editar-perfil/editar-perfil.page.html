@@ -1,0 +1,103 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <div class="headerContainer">
+      <div class="linkVoltar">
+        <a
+          [routerLink]="['/perfil-efetuado']"
+          routerLinkActive="router-link-active"
+          >< Voltar</a
+        >
+      </div>
+    </div>
+  </ion-toolbar>
+  <div class="toolbarline"></div>
+</ion-header>
+<ion-content [fullscreen]="true" class="ion-padding">
+  <div class="inputContainer">
+    <div class="inputGroup">
+      <form>
+        <div class="imageContainer">
+          <label class="labelContent">
+            <ion-icon name="person-circle-outline" class="fotoIcon"> </ion-icon>
+            <input type="file" accept="image/*" id="inputImage" />
+          </label>
+          <ion-item
+            lines="full"
+            class="item-has-focus ion-touched ion-valid"
+            id="fotoItem"
+          >
+            <span class="itemInfo">Editar Foto</span>
+          </ion-item>
+        </div>
+        <ion-input
+          label="Nome"
+          placeholder="Novo Nome"
+          type="text"
+          fill="outline"
+          labelPlacement="floating"
+        />
+        <ion-input
+          label="Idade"
+          placeholder="Nova Idade"
+          type="text"
+          fill="outline"
+          labelPlacement="floating"
+        />
+
+        <ion-input
+          label="Email"
+          placeholder="Novo email"
+          type="email"
+          fill="outline"
+          labelPlacement="floating"
+        />
+        <ion-input
+          label="Senha"
+          type="password"
+          fill="outline"
+          labelPlacement="floating"
+          placeholder="Nova Senha"
+        />
+
+        <div class="grid-input">
+          <ion-input
+            label="Altura"
+            placeholder="Nova Altura"
+            type="text"
+            fill="outline"
+            labelPlacement="floating"
+          />
+          <ion-input
+            label="Peso"
+            placeholder="Novo Peso"
+            type="text"
+            fill="outline"
+            labelPlacement="floating"
+          />
+          <ion-item>
+            <ion-select placeholder="Habilidade">
+              <ion-select-option value="Destro">Destro</ion-select-option>
+              <ion-select-option value="Canhoto">Canhoto</ion-select-option>
+              <ion-select-option value="Ambidestro"
+                >Ambidestro</ion-select-option
+              >
+            </ion-select>
+          </ion-item>
+
+          <ion-item>
+            <ion-select placeholder="Sexo" type="success">
+              <ion-select-option value="Destro">Masculino</ion-select-option>
+              <ion-select-option value="Canhoto">Feminino</ion-select-option>
+            </ion-select>
+          </ion-item>
+        </div>
+
+        <div class="alterar-button">
+          <ion-button color="success" type="submit" text="none"
+            ><span>Alterar</span></ion-button
+          >
+        </div>
+      </form>
+    </div>
+  </div>
+</ion-content>

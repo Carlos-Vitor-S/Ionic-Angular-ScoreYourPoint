@@ -2,65 +2,168 @@
   <ion-toolbar>
     <ion-title>Novo Evento</ion-title>
   </ion-toolbar>
+  <div class="toolbarline"></div>
 </ion-header>
 
-<ion-content scrollY="false" [fullscreen]="true" class="ion-padding">
-  <div class="addEventContainer">
-    <div class="addEventInputGroup">
+<ion-content [fullscreen]="true" class="ion-padding" appHideHeader>
+  <div class="inputContainer">
+    <div class="imageContainer">
+      <label class="labelContent">
+        <ion-icon name="person-circle-outline" class="fotoIcon"> </ion-icon>
+        <input type="file" accept="image/*" id="inputImage" />
+      </label>
+    </div>
+    <ion-item lines="full" class="item-has-focus ion-touched ion-valid">
+      <span class="itemInfo">Adicionar Foto</span>
+    </ion-item>
+    <div class="inputGroup">
       <form>
-        <ion-input
-          label="Nome do Evento "
-          placeholder="Ex: Evento livre"
-          type="text"
-          fill="outline"
-          labelPlacement="floating"
-        />
+        <div class="grid-input">
+          <ion-input
+            class="ion-margin-top"
+            label="Nome do Evento"
+            placeholder="Nome do evento"
+            type="text"
+            fill="outline"
+            labelPlacement="floating"
+          />
+          <ion-input
+            class="ion-margin-top"
+            label="Total Pessoas"
+            placeholder="Total"
+            type="text"
+            fill="outline"
+            labelPlacement="floating"
+          />
+        </div>
+
         <ion-input
           class="ion-margin-top"
-          label="Endereço "
-          placeholder="Ex: Rua, bairro, numero"
+          label="Rua"
           type="text"
           fill="outline"
           labelPlacement="floating"
+          placeholder="Rua"
         />
 
+        <div class="grid-container">
+          <ion-input
+            class="ion-margin-top"
+            label="Bairro"
+            type="text"
+            fill="outline"
+            labelPlacement="floating"
+            placeholder="Bairro"
+          />
+
+          <ion-input
+            class="ion-margin-top"
+            label="Número"
+            type="text"
+            fill="outline"
+            labelPlacement="floating"
+            placeholder="Número"
+          />
+        </div>
+        <div class="grid-input">
+          <ion-input
+            class="ion-margin-top"
+            label="Data"
+            type="date"
+            fill="outline"
+            labelPlacement="floating"
+            placeholder="dd/mm/aaaa"
+          />
+          <ion-input
+            class="ion-margin-top"
+            label="Hora"
+            type="time"
+            fill="outline"
+            labelPlacement="floating"
+            placeholder="Ex: 00:00"
+          />
+        </div>
         <ion-textarea
-          label="Descrição do Evento "
-          placeholder="Type something here"
-          placeholder="Observações"
-          type="text"
-          fill="outline"
-          labelPlacement="floating"
+          id="textArea"
           class="ion-margin-top"
-        >
-        </ion-textarea>
-        <ion-input
-          class="ion-margin-top"
-          label="Endereço "
-          placeholder="Ex: Rua, bairro, numero"
-          type="text"
-          fill="outline"
+          label="Descrição"
           labelPlacement="floating"
-        />
+          fill="outline"
+          placeholder="Anote suas observações sobre o evento"
+        ></ion-textarea>
 
-        <ion-accordion-group>
-          <ion-accordion value="first" fill="outline" class="ion-margin-top">
-            <ion-item slot="header" color="light">
-              <ion-label>Selecionar Modo</ion-label>
-            </ion-item>
-            <div class="ion-padding" slot="content">Modo Livre</div>
-            <div class="ion-padding" slot="content">Modo Padrão</div>
-          </ion-accordion>
-        </ion-accordion-group>
-        <ion-button
-          color="success"
-          expand="block"
-          class="login-button"
-          class="ion-margin-top"
-          [routerLink]="['/tab1-home']"
-          routerLinkActive="router-link-active"
-          >Cadastrar
-        </ion-button>
+        <div class="selectModeContainer">
+          <ion-item lines="full" class="item-has-focus ion-touched ion-valid">
+            <span class="itemInfo">Selecione o Modo </span>
+          </ion-item>
+        </div>
+
+        <div class="bannerContainer">
+          <div class="bannerContent">
+            <div class="banner" id="banner-livre">
+              <label>
+                <img
+                  src="/assets/banner-livre.png"
+                  class="bannerImg"
+                  alt="Banner Livre"
+                />
+                <input type="radio" class="inputRadio" checked="false" />
+              </label>
+
+              <div class="bannerDescricao">
+                <p>
+                  O modo de evento do tipo <b>padrão </b>irá permitir a escolha
+                  de um modelo de partida padrão com as regras do esporte, ou
+                  seja, nesse modo será possivel definir as posições de cada
+                  jogador em campo.
+                </p>
+              </div>
+            </div>
+
+            <div class="banner" id="banner-padrao" (click)="toggleDiv()">
+              <img
+                src="/assets/banner-padrao.png"
+                class="bannerImg"
+                alt="Banner Padrão"
+              />
+              <div class="bannerDescricao">
+                <p>
+                  O modo de evento do tipo <b>Livre</b> irá permitir a escolha
+                  de um modelo de partida sem definições prévias de regras do
+                  esporte, ou seja, nesse modo o foco é apenas reunir pessoas e
+                  jogar sem definir posições dos jogadores
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div *ngIf="mostrarDiv" class="selecionarTime">
+          <div class="timeContainer">
+            <h2>Time 1</h2>
+            <swiper-container>
+              <swiper-slide *ngFor="let card of cardsTime1">
+                <app-card-time [posicao]="card.posicao" [imagem]="card.imagem">
+                </app-card-time>
+              </swiper-slide>
+            </swiper-container>
+          </div>
+          <div class="timeContainer">
+            <h2>Time 2</h2>
+            <swiper-container>
+              <swiper-slide *ngFor="let card of cardsTime2">
+                <app-card-time [posicao]="card.posicao" [imagem]="card.imagem">
+                </app-card-time>
+              </swiper-slide>
+            </swiper-container>
+          </div>
+        </div>
+
+        <div class="login-button">
+          <ion-button color="success" type="submit" text="none"
+            ><span>Criar Evento</span></ion-button
+          >
+        </div>
       </form>
     </div>
   </div>
