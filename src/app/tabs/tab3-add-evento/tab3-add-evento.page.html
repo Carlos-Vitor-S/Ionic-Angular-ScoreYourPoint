@@ -135,28 +135,27 @@
                 </p>
               </div>
             </div>
+          </div>
+        </div>
 
-            <div *ngIf="mostrarDiv" class="selecionarTime">
-              <ion-card class="cardJogador">
-                <img src="/assets/goleiroNB.png" alt="" />
-                <div class="cardContent"></div>
-              </ion-card>
-              <ion-card class="cardJogador">
-                <img src="/assets/goleiroNB.png" alt="" />
-                <div class="cardContent">
-                  <h3>Goleiro</h3>
-                  <form>
-                    <ion-item>
-                      <ion-input
-                        label="Floating label"
-                        labelPlacement="floating"
-                        placeholder="Quantidade"
-                      ></ion-input>
-                    </ion-item>
-                  </form>
-                </div>
-              </ion-card>
-            </div>
+        <div *ngIf="mostrarDiv" class="selecionarTime">
+          <div class="timeContainer">
+            <h2>Time 1</h2>
+            <swiper-container>
+              <swiper-slide *ngFor="let card of cardsTime1">
+                <app-card-time [posicao]="card.posicao" [imagem]="card.imagem">
+                </app-card-time>
+              </swiper-slide>
+            </swiper-container>
+          </div>
+          <div class="timeContainer">
+            <h2>Time 2</h2>
+            <swiper-container>
+              <swiper-slide *ngFor="let card of cardsTime2">
+                <app-card-time [posicao]="card.posicao" [imagem]="card.imagem">
+                </app-card-time>
+              </swiper-slide>
+            </swiper-container>
           </div>
         </div>
 
