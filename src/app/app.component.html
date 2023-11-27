@@ -40,8 +40,7 @@
 
         <!--Tab 5 - Perfil  -->
 
-        <ion-tab-button
-          *ngIf="displayName == null"
+        <ion-tab-button *ngIf="isLoggedIn == false"
           [routerLink]="['/tab5-perfil']"
           routerLinkActive="router-link-active"
         >
@@ -49,9 +48,7 @@
           <ion-label>Perfil</ion-label>
         </ion-tab-button>
 
-        <ion-tab-button
-          *ngIf="displayName != null"
-        
+        <ion-tab-button *ngIf="isLoggedIn == true"
           [routerLink]="['/perfil-efetuado']"
           routerLinkActive="router-link-active"
         >
