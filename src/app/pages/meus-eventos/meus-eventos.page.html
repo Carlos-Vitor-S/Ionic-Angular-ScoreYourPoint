@@ -18,21 +18,22 @@
   <div class="toolbarline"></div>
 </ion-header>
 
+
 <ion-content [fullscreen]="true">
-  <div class="eventCardContainer">
+  <div *ngFor="let evento of events" class="eventCardContainer">
     <div class="imageContainer">
-      <img src="/assets/fotoEvento2.jpg" alt="foto evento" />
+      <img src="{{evento.img}}" alt="foto evento" />
     </div>
     <div class="eventDescription">
       <ul>
         <li>
-          <h3>Baba na unit</h3>
+          <h3>{{ evento.title }}</h3>
         </li>
         <li>
-          <h5>27 de abril, 19:00</h5>
+          <h5>{{ evento.data }}</h5>
         </li>
         <li>
-          <h6>Local: Farolandia</h6>
+          <h6>Local: {{ evento.local }}</h6>
         </li>
       </ul>
     </div>

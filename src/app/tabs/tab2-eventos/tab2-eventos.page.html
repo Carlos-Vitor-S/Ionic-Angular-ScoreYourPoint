@@ -2,21 +2,26 @@
   <ion-toolbar>
     <div class="eventosContainer">
       <ion-title>Eventos</ion-title>
-      <ion-title
-        class="evento"
-        [routerLink]="['/meus-eventos']"
-        routerLinkActive="router-link-active"
-        >Meus Eventos</ion-title
-      >
+      <ion-title class="evento" [routerLink]="['/meus-eventos']" routerLinkActive="router-link-active">Meus
+        Eventos</ion-title>
     </div>
   </ion-toolbar>
   <div class="toolbarline"></div>
 </ion-header>
 
 <ion-content [fullscreen]="true" class="ion-padding" scrollY="true">
-  <app-card></app-card>
-  <app-card></app-card>
-  <app-card></app-card>
-  <app-card></app-card>
-  <app-card></app-card>
+  <ion-grid class="ion-text-center">
+    <ion-row class="ion-justify-content-center">
+      <ion-col size="" style="margin-bottom: 25px;" >
+        <app-card *ngFor="let evento of eventos"
+          [title]="evento.title"
+          [img]="evento.img"
+          [model]="evento.model"
+          [players]="evento.players"
+          [data]="evento.data"
+          [local]="evento.local">
+        </app-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

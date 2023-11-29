@@ -1,18 +1,27 @@
-<div class="eventCardContainer">
-  <div class="imageContainer">
-    <img src="/assets/fotoEvento.jpg" alt="foto evento" />
-  </div>
-  <div class="eventDescription">
-    <ul>
-      <li>
-        <h3>Baba na unit</h3>
-      </li>
-      <li>
-        <h5>27 de abril, 19:00</h5>
-      </li>
-      <li>
-        <h6>Local: Farolandia</h6>
-      </li>
-    </ul>
-  </div>
-</div>
+  <ion-card>
+    <div><img alt="Silhouette of mountains" src="{{img}}" width="250" class="image-resize" /></div>
+  
+    <ion-card-header>
+      <ion-card-title>{{title}}</ion-card-title>
+      <ion-card-subtitle>
+        {{subtitle}}
+      </ion-card-subtitle>
+    </ion-card-header>
+  
+    <ion-card-content class="ion-text-center">
+      <div class="">
+        <ion-icon name="football-outline"></ion-icon> {{model}}
+      </div>
+      <div class="">
+        <ion-icon name="shirt-outline"></ion-icon> {{players}}/10
+      </div>
+      <div class="">
+        <ion-icon name="time-outline"></ion-icon> {{data}}
+      </div>
+      <div class="">
+        <ion-icon name="location-sharp"></ion-icon> {{local}}
+      </div>
+      <ion-button color="success" size="small" (click)="participateInEvent(eventId)">Participar</ion-button>
+
+    </ion-card-content>
+  </ion-card>

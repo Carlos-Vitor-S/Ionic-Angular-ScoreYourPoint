@@ -24,6 +24,7 @@ import { AngularFireAuthModule } from '@angular/fire/compat/auth';
     AngularFireAuthModule,
     FormsModule,
     ReactiveFormsModule,
+    IonicModule
   ],
   providers: [
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },

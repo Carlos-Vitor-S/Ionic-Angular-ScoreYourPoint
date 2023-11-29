@@ -1,0 +1,31 @@
+.card {
+    width: 300px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .card-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .icon {
+    margin-right: 10px;
+    width: 30px;
+    text-align: center;
+  }
+  
+  .icon i {
+    font-size: 24px;
+    color: #333;
+  }
+  
+  span {
+    font-size: 16px;
+    color: #333;
+  }
+  
